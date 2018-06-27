@@ -1,0 +1,35 @@
+.Overlay{
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background-color: #000000CC;
+	top: 0;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.Overlay__content{
+	max-width: 1024px;
+	background-color: white;
+	flex-grow: 1;
+	padding: 36px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.Overlay__headline{
+	font-family: "TeleGroteskScreen";
+	color: #383838;
+	font-size: 18px;
+	line-height: 1.333;
+	font-weight: 600;
+}
+
+.Overlay__close{
+	position: absolute;
+	top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

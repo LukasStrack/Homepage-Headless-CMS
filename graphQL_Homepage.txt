@@ -1,0 +1,57 @@
+{
+  allContentfulHomepage(limit:100) {
+    edges {
+      node {
+		contentTypes{
+				__typename
+				... on ContentfulTeaser{
+				  title
+				  description
+				  button
+				  legalNote
+				  strer
+				}
+				... on ContentfulDirekteinstiege{
+				  direkteinstieg{
+					title
+					id
+					picture{
+					  file{
+						url
+					  }
+					}
+				  }
+				}
+				... on ContentfulUtilityContainer{
+				  utilityItems{
+					title
+					picture{
+					  file{
+						url
+					  }
+					}
+				  }
+				}
+			}
+		}
+	}
+  }
+}
+
+
+    allContentfulUtilityContainer (filter: {
+	    node_locale: {eq: "en-US"}
+	  }) {
+	  edges {
+		  node {
+			utilityItems{
+			  title
+			  picture{
+				file{
+				  url
+				}
+			  }
+			}
+		  }
+	    } 
+	}

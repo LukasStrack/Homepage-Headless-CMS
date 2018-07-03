@@ -1,0 +1,66 @@
+.TeaserReihe1{
+	height: 520px;
+	flex-basis: calc(50% - 6px);
+	flex-grow: 0;
+	flex-shrink: 0;
+	background-size: cover;	
+	background-position: 50% 50%;
+	padding: 48px;
+	text-decoration: none;
+	box-sizing: border-box;
+	margin-bottom: 12px;
+}
+
+.TeaserReihe1--isBig{
+	flex-basis: 100%;
+}
+
+.TeaserReihe1__content{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	align-items: center;
+}
+
+.TeaserReihe1__headline{
+	color: white;
+	font-size: 48px;	
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "TeleGroteskScreen";
+	font-weight: 700;
+}
+
+.TeaserReihe1__subline{
+	color: white;
+	font-size: 24px;	
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "TeleGroteskScreen";
+}
+
+.TeaserReihe1__link{
+	color: white;
+	padding: 12px;
+	border: 1px solid #B3b3b3;
+	border-radius: -4px;
+	text-align: center;
+	transition: background-color 0.2s ease-in-out;
+	font-family: "TeleGroteskScreen";
+}
+
+.TeaserReihe1__link:hover{
+	background-color: #e20074;
+}
+
+.TeaserReihe1__textBlock{
+	max-width: 420px;
+	position: relative;
+}
+
+.TeaserReihe1__bubble{
+	position: absolute;
+	top: 200px;
+	right: 0;
+}

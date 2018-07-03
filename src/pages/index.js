@@ -1,38 +1,68 @@
-import React, { Component } from 'react';
-import Teaser from '../components/Teaser';
-import Overlay from '../components/Overlay'
-import "./index.css";	
+import React, { Component } from 'react'
+import Header from '../components/Header'
+import Buehne from '../components/Buehne'
+import Direkteinstiege from '../components/Direkteinstiege'
+import Notfallbox from '../components/Notfallbox'
+import TeaserReihe1 from '../components/TeaserReihe1'
+import TeaserReihe2 from '../components/TeaserReihe2'
+import TeaserReihe3 from '../components/TeaserReihe3'
+import TeaserReihe4 from '../components/TeaserReihe4'
+import TeaserReihe5 from '../components/TeaserReihe5'
+import UtilityItems from '../components/UtilityItems'
+import Footer from '../components/Footer'
+import "./index.css"	
 
 
 class index extends React.Component
 {
-	state = {
-		isOverlayOpen: false,
-		overlayHeadline: "",
-		overlayContent: ""
-	}
 	render()
 	{
-		console.log(this.props);
+	console.log(this.props.data);
 		return(
-			<div>	
-			<h1>{this.props.data.contentfulPage.headline}</h1>
-			
-			{
-				this.state.isOverlayOpen === true && 
-			
-			<Overlay 
-				headline={this.state.overlayHeadline}
-				handleCloseClick = {
-					(event)=>{this.setState({isOverlayOpen: false})}
-				}
-			>{this.state.overlayContent}</Overlay>
-			}
-			
+			<div>
 			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
 			{
-				this.props.data.contentfulPage.teasers.map((teaser, index) => (
-				<Teaser 
+				<Buehne
+					handleClick = {
+						(event)=>{this.setState({
+							isOverlayOpen: true,
+							overlayHeadline: this.props.data.contentfulBuehne.buehne.title,
+							overlayContent: this.props.data.contentfulBuehne.buehne.description
+							})}
+						}
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...this.props.data.contentfulBuehne.buehne	
+					}
+				></Buehne>
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				this.props.data.contentfulDirekteinstiege.direkteinstieg.map((direkteinstieg, index) => (
+				<Direkteinstiege
+					{
+						...direkteinstieg
+					}
+				></Direkteinstiege>
+				))
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				<Notfallbox
+					{
+						...this.props.data.contentfulNotfallbox	
+					}
+				></Notfallbox>
+			}
+			</div>			
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				this.props.data.contentfulTeaserReihe1.teaserReihe1.map((teaser, index) => (
+				<TeaserReihe1
 					handleClick = {
 						(event)=>{this.setState({
 							isOverlayOpen: true,
@@ -46,7 +76,102 @@ class index extends React.Component
 					{
 						...teaser	
 					}
-				></Teaser>
+				></TeaserReihe1>
+				))
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				this.props.data.contentfulTeaserReihe2.teaserReihe2.map((teaser, index) => (
+				<TeaserReihe2
+					handleClick = {
+						(event)=>{this.setState({
+							isOverlayOpen: true,
+							overlayHeadline: teaser.title,
+							overlayContent: teaser.description
+							})}
+						}
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...teaser	
+					}
+				></TeaserReihe2>
+				))
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{	
+				this.props.data.contentfulTeaserReihe3.teaserReihe3.map((teaser, index) => (
+				<TeaserReihe3
+					handleClick = {
+						(event)=>{this.setState({
+							isOverlayOpen: true,
+							overlayHeadline: teaser.title,
+							overlayContent: teaser.description
+							})}
+						}
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...teaser
+					}
+				></TeaserReihe3>
+				))
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				this.props.data.contentfulTeaserReihe4.teaserReihe4.map((teaser, index) => (
+				<TeaserReihe4
+					handleClick = {
+						(event)=>{this.setState({
+							isOverlayOpen: true,
+							overlayHeadline: teaser.title,
+							overlayContent: teaser.description
+							})}
+						}
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...teaser	
+					}
+				></TeaserReihe4>
+				))
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				this.props.data.contentfulTeaserReihe5.teaserReihe5.map((teaser, index) => (
+				<TeaserReihe5
+					handleClick = {
+						(event)=>{this.setState({
+							isOverlayOpen: true,
+							overlayHeadline: teaser.title,
+							overlayContent: teaser.description
+							})}
+						}
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...teaser	
+					}
+				></TeaserReihe5>
+				))
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				this.props.data.contentfulUtilityContainer.utilityItems.map((utilityItem, index) => (
+				<UtilityItems
+					{
+						...utilityItem
+					}
+				></UtilityItems>
 				))
 			}
 			</div>
@@ -57,25 +182,153 @@ class index extends React.Component
 
 export default index;
 
-export const pageQuery = graphql 
-	`query teaserQuery{
-		contentfulPage(headline: {eq:"Startseite"})
-		  {
-			headline
-			contentful_id
-			id
-			teasers 
-			{
-			  id
-			  title
-			  description
-			  button
-			  isBig
-			  picture {
-				file{
-				  url
-				}
-			  }
+export const homepageQuery = graphql 
+	`query homepageQuery {
+	  contentfulBuehne {
+		buehne {
+		  title
+		  description
+		  button
+		  strer
+		  href
+		  isBig
+		  picture {
+			file {
+			  url
 			}
 		  }
+		  hasTwoButtons
+		  hasLegalNote
+		  hasTwoLegalNotes
+		  hasOrtStrasseHausnummerField
+		  size
+		}
+	  }
+	  contentfulDirekteinstiege {
+		direkteinstieg {
+		  dPicture {
+			file {
+			  url
+			}
+		  }
+		  title
+		}
+	  }
+	  contentfulNotfallbox {
+		titel
+		beschreibung
+		link
+		href
+	  }
+	  contentfulTeaserReihe1 {
+		teaserReihe1 {
+		  title
+		  description
+		  button
+		  strer
+		  href
+		  isBig
+		  picture {
+			file {
+			  url
+			}
+		  }
+		  hasTwoButtons
+		  hasLegalNote
+		  hasTwoLegalNotes
+		  hasOrtStrasseHausnummerField
+		  size
+		}
+	  }
+	  contentfulTeaserReihe2 {
+		teaserReihe2 {
+		  title
+		  description
+		  button
+		  strer
+		  href
+		  isBig
+		  picture {
+			file {
+			  url
+			}
+		  }
+		  hasTwoButtons
+		  hasLegalNote
+		  hasTwoLegalNotes
+		  hasOrtStrasseHausnummerField
+		  size
+		}
+	  }
+	  contentfulTeaserReihe3 {
+		teaserReihe3 {
+		  title
+		  description
+		  button
+		  strer
+		  href
+		  isBig
+		  picture {
+			file {
+			  url
+			}
+		  }
+		  hasTwoButtons
+		  hasLegalNote
+		  hasTwoLegalNotes
+		  hasOrtStrasseHausnummerField
+		  size
+		}
+	  }
+	  contentfulTeaserReihe4 {
+		teaserReihe4 {
+		  title
+		  description
+		  button
+		  strer
+		  href
+		  isBig
+		  picture {
+			file {
+			  url
+			}
+		  }
+		  hasTwoButtons
+		  hasLegalNote
+		  hasTwoLegalNotes
+		  hasOrtStrasseHausnummerField
+		  size
+		}
+	  }
+	  contentfulTeaserReihe5 {
+		teaserReihe5 {
+		  title
+		  description
+		  button
+		  strer
+		  href
+		  isBig
+		  picture {
+			file {
+			  url
+			}
+		  }
+		  hasTwoButtons
+		  hasLegalNote
+		  hasTwoLegalNotes
+		  hasOrtStrasseHausnummerField
+		  size
+		}
+	  }
+	  contentfulUtilityContainer {
+		utilityItems {
+		  picture {
+			file {
+			  url
+			}
+		  }
+		  title
+		  href
+		}
+	  }
 	}`;

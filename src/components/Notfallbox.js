@@ -13,9 +13,12 @@ class Notfallbox extends React.Component
 	{
 			return(
 			<div className="Notfallbox">
-				<p>{this.props.titel}</p>
-				<p>{this.props.beschreibung}</p>
-				<p>{this.props.link}</p>
+				<div className="Notfallbox__headline">{this.props.titel}</div>
+				<p className="Notfallbox__description">
+					{this.props.beschreibung}
+					<br/>
+					<a href={this.props.href}>{this.props.link}</a>
+				</p>
 			</div>
 			);					
 	}

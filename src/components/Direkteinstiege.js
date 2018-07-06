@@ -12,15 +12,10 @@ class Direkteinstiege extends React.Component
 	render()
 	{
 			return(
-			<div className="Direkteinstiege">
-			<ul>
-			<li>
-				<a>
-					<span>{this.props.title}</span>
-				</a>				
-			</li>
-			</ul>
-			</div>
+				<a href={this.props.href.href}>
+					<div className="svg" dangerouslySetInnerHTML={{ __html: this.props.svg.svg }}></div>
+					<span className="label">{this.props.title}</span>
+				</a>
 			);					
 	}
 }

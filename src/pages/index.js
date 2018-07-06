@@ -39,26 +39,41 @@ class index extends React.Component
 				></Buehne>
 			}
 			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			<div className="Direkteinstiege">
 			{
-				this.props.data.contentfulDirekteinstiege.direkteinstieg.map((direkteinstieg, index) => (
-				<Direkteinstiege
-					{
-						...direkteinstieg
-					}
-				></Direkteinstiege>
-				))
+				<nav className="nav">
+					<ul className="list">
+						{
+						this.props.data.contentfulDirekteinstiege.direkteinstieg.map((direkteinstieg, index) => (
+						<li>
+							<div className="round_dark">
+								<Direkteinstiege
+									{
+										...direkteinstieg
+									}
+								></Direkteinstiege>
+							</div>
+						</li>
+						))
+						}
+					</ul>
+				</nav>
 			}
 			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			<div>
 			{
-				<Notfallbox
-					{
-						...this.props.data.contentfulNotfallbox	
-					}
-				></Notfallbox>
+				this.props.data.contentfulNotfallbox.isNotfallboxActive === true &&
+				<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+				{
+					<Notfallbox
+						{
+							...this.props.data.contentfulNotfallbox	
+						}
+					></Notfallbox>
+				}
+				</div>
 			}
-			</div>			
+			</div>
 			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
 			{
 				this.props.data.contentfulTeaserReihe1.teaserReihe1.map((teaser, index) => (
@@ -74,7 +89,7 @@ class index extends React.Component
 							<p>Hello World</p>
 						}
 					{
-						...teaser	
+						...teaser
 					}
 				></TeaserReihe1>
 				))
@@ -189,29 +204,24 @@ export const homepageQuery = graphql
 		  title
 		  description
 		  button
-		  strer
 		  href
 		  isBig
-		  picture {
+		  backgroundImage {
 			file {
 			  url
 			}
 		  }
-		  hasTwoButtons
-		  hasLegalNote
-		  hasTwoLegalNotes
-		  hasOrtStrasseHausnummerField
-		  size
 		}
 	  }
 	  contentfulDirekteinstiege {
 		direkteinstieg {
-		  dPicture {
-			file {
-			  url
-			}
+		  svg {
+		    svg
 		  }
 		  title
+		  href{
+			href
+		  }
 		}
 	  }
 	  contentfulNotfallbox {
@@ -219,25 +229,20 @@ export const homepageQuery = graphql
 		beschreibung
 		link
 		href
+		isNotfallboxActive
 	  }
 	  contentfulTeaserReihe1 {
 		teaserReihe1 {
 		  title
 		  description
 		  button
-		  strer
 		  href
 		  isBig
-		  picture {
+		  backgroundImage {
 			file {
 			  url
 			}
 		  }
-		  hasTwoButtons
-		  hasLegalNote
-		  hasTwoLegalNotes
-		  hasOrtStrasseHausnummerField
-		  size
 		}
 	  }
 	  contentfulTeaserReihe2 {
@@ -245,19 +250,13 @@ export const homepageQuery = graphql
 		  title
 		  description
 		  button
-		  strer
 		  href
 		  isBig
-		  picture {
+		  backgroundImage {
 			file {
 			  url
 			}
 		  }
-		  hasTwoButtons
-		  hasLegalNote
-		  hasTwoLegalNotes
-		  hasOrtStrasseHausnummerField
-		  size
 		}
 	  }
 	  contentfulTeaserReihe3 {
@@ -265,19 +264,13 @@ export const homepageQuery = graphql
 		  title
 		  description
 		  button
-		  strer
 		  href
 		  isBig
-		  picture {
+		  backgroundImage {
 			file {
 			  url
 			}
 		  }
-		  hasTwoButtons
-		  hasLegalNote
-		  hasTwoLegalNotes
-		  hasOrtStrasseHausnummerField
-		  size
 		}
 	  }
 	  contentfulTeaserReihe4 {
@@ -285,19 +278,13 @@ export const homepageQuery = graphql
 		  title
 		  description
 		  button
-		  strer
 		  href
 		  isBig
-		  picture {
+		  backgroundImage {
 			file {
 			  url
 			}
 		  }
-		  hasTwoButtons
-		  hasLegalNote
-		  hasTwoLegalNotes
-		  hasOrtStrasseHausnummerField
-		  size
 		}
 	  }
 	  contentfulTeaserReihe5 {
@@ -305,19 +292,13 @@ export const homepageQuery = graphql
 		  title
 		  description
 		  button
-		  strer
 		  href
 		  isBig
-		  picture {
+		  backgroundImage {
 			file {
 			  url
 			}
 		  }
-		  hasTwoButtons
-		  hasLegalNote
-		  hasTwoLegalNotes
-		  hasOrtStrasseHausnummerField
-		  size
 		}
 	  }
 	  contentfulUtilityContainer {

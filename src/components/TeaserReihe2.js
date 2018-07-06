@@ -18,7 +18,7 @@ class TeaserReihe2 extends React.Component
 					"TeaserReihe2": true,
 					"TeaserReihe2--isBig": this.props.isBig === true
 				}])}
-				style={{backgroundImage: this.props.picture? "url("+this.props.picture.file.url+")": "none"}}
+				style={{backgroundImage: this.props.backgroundImage? "url("+this.props.backgroundImage.file.url+")": "none"}}
 			>
 				<div className="TeaserReihe2__content">
 					<div className="TeaserReihe2__textBlock">

@@ -14,3 +14,41 @@
 	margin-bottom: 12px;
 	background-color: #D0D0D0;
 }
+
+.round_dark:hover{
+	border-color: #e20074;
+}
+
+.round_dark:hover .svg svg{
+	fill: #e20074;
+}
+
+.category-nav .line--out {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3px;
+}
+
+.round_dark:hover .svg .category-nav .line--out{
+	stroke: #e20074;
+}
+
+.category-nav .line--long {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2.5px;
+}
+
+.round_dark:hover .svg .category-nav .line--long{
+	stroke: #e20074;
+}
+
+.category-nav .line--short {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+}
+
+.round_dark:hover .svg .category-nav .line--short{
+	stroke: #e20074;
+}

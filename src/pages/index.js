@@ -4,8 +4,6 @@ import Buehne from '../components/Buehne'
 import Direkteinstiege from '../components/Direkteinstiege'
 import Notfallbox from '../components/Notfallbox'
 import Teaser from '../components/Teaser'
-import TeaserEins from '../components/TeaserEins'
-import TeaserZwei from '../components/TeaserZwei'
 import UtilityItems from '../components/UtilityItems'
 import Footer from '../components/Footer'
 import "./index.css"	
@@ -64,28 +62,6 @@ class index extends React.Component
 						...this.props.data.contentfulNotfallbox	
 					}
 				></Notfallbox>
-			}
-			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-			{
-				<TeaserEins
-						bubble = {
-							<p>Hello World</p>
-						}
-					{
-						...this.props.data.contentfulTeaserEins.teaserEins
-					}
-				></TeaserEins>
-			}
-			{
-				<TeaserZwei
-						bubble = {
-							<p>Hello World</p>
-						}
-					{
-						...this.props.data.contentfulTeaserZwei.teaserZwei
-					}
-				></TeaserZwei>
 			}
 			</div>
 			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
@@ -178,36 +154,6 @@ export const homepageQuery = graphql
 			  title
 			}
 		  }
-		  backgroundImage {
-			file {
-			  url
-			}
-		  }
-		}
-	  }
-	  contentfulTeaserEins {
-		teaserEins {
-		  title
-		  description
-		  button
-		  href
-		  isBig
-		  isTeaserBright
-		  backgroundImage {
-			file {
-			  url
-			}
-		  }
-		}
-	  }
-	  contentfulTeaserZwei {
-		teaserZwei {
-		  title
-		  description
-		  button
-		  href
-		  isBig
-		  isTeaserBright
 		  backgroundImage {
 			file {
 			  url

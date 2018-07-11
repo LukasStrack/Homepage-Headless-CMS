@@ -82,28 +82,6 @@ table {
 	margin: 0px 10px 0px;
 }
 
-.Teaser__bubble{
-	width: 154px;
-	height: 154px;
-	border-radius: 50%;
-	background-color: blue;
-    border-color: #383838;
-	border: 4px solid transparent;
-	display: flex;
-	flex-direction: column;
-    justify-content: center;
-	text-align: center;
-	margin: 0px 10px 0px;
-}
-
-.round_dark:hover{
-	border-color: #e20074;
-}
-
-.round_dark:hover .svg svg{
-	fill: #e20074;
-}
-
 @font-face {
     font-family : "TeleGroteskScreen-Thin";
     font-weight : 300;

@@ -28,10 +28,15 @@ class Teaser extends React.Component
 					<div className="Teaser__textBlock">
 						<h2 className="Teaser__headline">{this.props.title}</h2>
 						<p className="Teaser__subline">{this.props.description}</p>
-							<div className="Teaser__bubble">
-								<p>{this.props.stoerer.description}</p>
-							</div>
 					</div>
+					{
+						this.props.stoerer !== null &&
+						<aside className="badge__round" style={{background: this.props.stoerer.color}}>
+						  <span className="badge_css">
+							 {this.props.stoerer.description}
+						  </span>
+						</aside>
+					}
 					<div className="Teaser__link" onClick={this.props.handleClick}>{this.props.button}</div>
 				</div>				
 			</a>

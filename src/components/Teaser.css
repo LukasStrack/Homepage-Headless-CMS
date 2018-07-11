@@ -40,20 +40,42 @@
 }
 
 .Teaser__headline{
-	color: white;
-	font-size: 48px;	
+	color: #fff;
+	font-size: 1.6875rem;
+	line-height: 1.875rem;
+	display: inline-block;
+	margin: 29px auto 0;
+	padding: 0;
 	text-align: center;
 	text-transform: uppercase;
-	font-family: "TeleGroteskScreen";
-	font-weight: 700;
+	font-family: "TeleGroteskScreen-Ultra";
+}
+
+@media screen and (min-width: 768px){
+.Teaser__headline{
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+	margin-top: 39px;
+}
+.Teaser__subline{
+    font-size: 21px;
+    font-size: 1.3125rem;
+    line-height: 27px;
+    line-height: 1.6875rem;
+}
 }
 
 .Teaser__subline{
-	color: white;
-	font-size: 24px;	
-	text-align: center;
-	text-transform: uppercase;
-	font-family: "TeleGroteskScreen";
+	font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    color: #fff;
+    display: block;
+    font-family: "TeleGroteskScreen-Regular";
+    margin: 6px auto 0;
+    padding: 0;
+    text-transform: uppercase;
 }
 
 .Teaser__link{
@@ -75,8 +97,22 @@
 	position: relative;
 }
 
-.Teaser__bubble{
-	position: absolute;
-	top: 200px;
-	right: 0;
+.badge__round{
+	color: white;
+	border-radius: 50%;
+	transform: rotate(-7.5deg);
+	text-align: center;
+	font-family: "TeleGroteskScreen";
+	height: 150px;
+	width: 150px;
+	margin-left: 50%;
+}
+
+.Teaser--isBig .badge__round{
+	margin-left: 0%;
+}
+
+.badge_css{
+	margin: auto;
+	padding: 30px;
 }

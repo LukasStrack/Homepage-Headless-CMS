@@ -19,7 +19,8 @@ class Teaser extends React.Component
 				href="#"
 				className={classcat([{
 					"Teaser": true,
-					"Teaser--isBig": this.props.isBig === true
+					"Teaser--isBig": this.props.isBig === true,
+					"Teaser--isTeaserBright": this.props.isTeaserBright === true
 				}])}
 				style={{backgroundImage: this.props.backgroundImage? "url("+this.props.backgroundImage.file.url+")": "none"}}
 			>
@@ -28,7 +29,7 @@ class Teaser extends React.Component
 						<h2 className="Teaser__headline">{this.props.title}</h2>
 						<p className="Teaser__subline">{this.props.description}</p>
 							<div className="Teaser__bubble">
-							{this.props.bubble}
+								<p>{this.props.stoerer.description}</p>
 							</div>
 					</div>
 					<div className="Teaser__link" onClick={this.props.handleClick}>{this.props.button}</div>

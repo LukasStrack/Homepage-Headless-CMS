@@ -3,11 +3,9 @@ import Header from '../components/Header'
 import Buehne from '../components/Buehne'
 import Direkteinstiege from '../components/Direkteinstiege'
 import Notfallbox from '../components/Notfallbox'
-import TeaserReihe1 from '../components/TeaserReihe1'
-import TeaserReihe2 from '../components/TeaserReihe2'
-import TeaserReihe3 from '../components/TeaserReihe3'
-import TeaserReihe4 from '../components/TeaserReihe4'
-import TeaserReihe5 from '../components/TeaserReihe5'
+import Teaser from '../components/Teaser'
+import TeaserEins from '../components/TeaserEins'
+import TeaserZwei from '../components/TeaserZwei'
 import UtilityItems from '../components/UtilityItems'
 import Footer from '../components/Footer'
 import "./index.css"	
@@ -45,7 +43,6 @@ class index extends React.Component
 					<ul className="list">
 						{
 						this.props.data.contentfulDirekteinstiege.direkteinstieg.map((direkteinstieg, index) => (
-						<li>
 							<div className="round_dark">
 								<Direkteinstiege
 									{
@@ -53,7 +50,6 @@ class index extends React.Component
 									}
 								></Direkteinstiege>
 							</div>
-						</li>
 						))
 						}
 					</ul>
@@ -63,132 +59,68 @@ class index extends React.Component
 			<div>
 			{
 				this.props.data.contentfulNotfallbox.isNotfallboxActive === true &&
-				<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+				<Notfallbox
+					{
+						...this.props.data.contentfulNotfallbox	
+					}
+				></Notfallbox>
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				<TeaserEins
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...this.props.data.contentfulTeaserEins.teaserEins
+					}
+				></TeaserEins>
+			}
+			{
+				<TeaserZwei
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...this.props.data.contentfulTeaserZwei.teaserZwei
+					}
+				></TeaserZwei>
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+			{
+				this.props.data.contentfulTeaserReihe15.teaser.map((teaser, index) => (
+				<Teaser
+					handleClick = {
+						(event)=>{this.setState({
+							isOverlayOpen: true,
+							overlayHeadline: teaser.title,
+							overlayContent: teaser.description
+							})}
+						}
+						bubble = {
+							<p>Hello World</p>
+						}
+					{
+						...teaser
+					}
+				></Teaser>
+				))
+			}
+			</div>
+			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
+				<ul className="utilities">
 				{
-					<Notfallbox
-						{
-							...this.props.data.contentfulNotfallbox	
-						}
-					></Notfallbox>
-				}
-				</div>
-			}
-			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-			{
-				this.props.data.contentfulTeaserReihe1.teaserReihe1.map((teaser, index) => (
-				<TeaserReihe1
-					handleClick = {
-						(event)=>{this.setState({
-							isOverlayOpen: true,
-							overlayHeadline: teaser.title,
-							overlayContent: teaser.description
-							})}
-						}
-						bubble = {
-							<p>Hello World</p>
-						}
-					{
-						...teaser
-					}
-				></TeaserReihe1>
-				))
-			}
-			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-			{
-				this.props.data.contentfulTeaserReihe2.teaserReihe2.map((teaser, index) => (
-				<TeaserReihe2
-					handleClick = {
-						(event)=>{this.setState({
-							isOverlayOpen: true,
-							overlayHeadline: teaser.title,
-							overlayContent: teaser.description
-							})}
-						}
-						bubble = {
-							<p>Hello World</p>
-						}
-					{
-						...teaser	
-					}
-				></TeaserReihe2>
-				))
-			}
-			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-			{	
-				this.props.data.contentfulTeaserReihe3.teaserReihe3.map((teaser, index) => (
-				<TeaserReihe3
-					handleClick = {
-						(event)=>{this.setState({
-							isOverlayOpen: true,
-							overlayHeadline: teaser.title,
-							overlayContent: teaser.description
-							})}
-						}
-						bubble = {
-							<p>Hello World</p>
-						}
-					{
-						...teaser
-					}
-				></TeaserReihe3>
-				))
-			}
-			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-			{
-				this.props.data.contentfulTeaserReihe4.teaserReihe4.map((teaser, index) => (
-				<TeaserReihe4
-					handleClick = {
-						(event)=>{this.setState({
-							isOverlayOpen: true,
-							overlayHeadline: teaser.title,
-							overlayContent: teaser.description
-							})}
-						}
-						bubble = {
-							<p>Hello World</p>
-						}
-					{
-						...teaser	
-					}
-				></TeaserReihe4>
-				))
-			}
-			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-			{
-				this.props.data.contentfulTeaserReihe5.teaserReihe5.map((teaser, index) => (
-				<TeaserReihe5
-					handleClick = {
-						(event)=>{this.setState({
-							isOverlayOpen: true,
-							overlayHeadline: teaser.title,
-							overlayContent: teaser.description
-							})}
-						}
-						bubble = {
-							<p>Hello World</p>
-						}
-					{
-						...teaser	
-					}
-				></TeaserReihe5>
-				))
-			}
-			</div>
-			<div style={{display: "flex", flexWrap: "wrap", justifyContent: "space-between"}}>
-			{
 				this.props.data.contentfulUtilityContainer.utilityItems.map((utilityItem, index) => (
-				<UtilityItems
-					{
-						...utilityItem
-					}
-				></UtilityItems>
+					<UtilityItems
+						{
+							...utilityItem
+						}
+					></UtilityItems>
 				))
-			}
+				}
+				</ul>
 			</div>
 			</div>
 		);	
@@ -231,13 +163,21 @@ export const homepageQuery = graphql
 		href
 		isNotfallboxActive
 	  }
-	  contentfulTeaserReihe1 {
-		teaserReihe1 {
+	  contentfulTeaserReihe15 {
+		teaser {
 		  title
 		  description
 		  button
 		  href
 		  isBig
+		  isTeaserBright
+		  stoerer {
+			description
+			color
+			legalNote {
+			  title
+			}
+		  }
 		  backgroundImage {
 			file {
 			  url
@@ -245,13 +185,14 @@ export const homepageQuery = graphql
 		  }
 		}
 	  }
-	  contentfulTeaserReihe2 {
-		teaserReihe2 {
+	  contentfulTeaserEins {
+		teaserEins {
 		  title
 		  description
 		  button
 		  href
 		  isBig
+		  isTeaserBright
 		  backgroundImage {
 			file {
 			  url
@@ -259,41 +200,14 @@ export const homepageQuery = graphql
 		  }
 		}
 	  }
-	  contentfulTeaserReihe3 {
-		teaserReihe3 {
+	  contentfulTeaserZwei {
+		teaserZwei {
 		  title
 		  description
 		  button
 		  href
 		  isBig
-		  backgroundImage {
-			file {
-			  url
-			}
-		  }
-		}
-	  }
-	  contentfulTeaserReihe4 {
-		teaserReihe4 {
-		  title
-		  description
-		  button
-		  href
-		  isBig
-		  backgroundImage {
-			file {
-			  url
-			}
-		  }
-		}
-	  }
-	  contentfulTeaserReihe5 {
-		teaserReihe5 {
-		  title
-		  description
-		  button
-		  href
-		  isBig
+		  isTeaserBright
 		  backgroundImage {
 			file {
 			  url
@@ -311,5 +225,9 @@ export const homepageQuery = graphql
 		  title
 		  href
 		}
+	  }
+	  contentfulStorer {
+		description
+		color
 	  }
 	}`;

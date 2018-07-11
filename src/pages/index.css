@@ -82,6 +82,20 @@ table {
 	margin: 0px 10px 0px;
 }
 
+.Teaser__bubble{
+	width: 154px;
+	height: 154px;
+	border-radius: 50%;
+	background-color: blue;
+    border-color: #383838;
+	border: 4px solid transparent;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	text-align: center;
+	margin: 0px 10px 0px;
+}
+
 .round_dark:hover{
 	border-color: #e20074;
 }
@@ -91,31 +105,36 @@ table {
 }
 
 @font-face {
-    font-family : "TeleGroteskScreen";
+    font-family : "TeleGroteskScreen-Thin";
     font-weight : 300;
     font-style  : normal;
     src         : url("/fonts/telegroteskscreen-thin.woff") format("woff")
 }
 
 @font-face {
-    font-family : "TeleGroteskScreen";
+    font-family : "TeleGroteskScreen-Regular";
     font-weight : 400;
     font-style  : normal;
     src         : url("/fonts/telegroteskscreen-regular.woff") format("woff")
 }
 
 @font-face {
-    font-family : "TeleGroteskScreen";
+    font-family : "TeleGroteskScreen-Medium";
     font-style  : normal;
     font-weight : 600;
     src         : url("/fonts/telegroteskscreen-medium.woff") format("woff");
 }
 
 @font-face {
-    font-family : "TeleGroteskScreen";
+    font-family : "TeleGroteskScreen-Bold";
     font-style  : normal;
     font-weight : 700;
     src         : url("/fonts/telegroteskscreen-bold.woff") format("woff");
+}
+
+@font-face {
+    font-family : "TeleGroteskScreen-Ultra";
+    src         : url("/fonts/telegroteskscreen-ultra.woff") format("woff");
 }
 
 @font-face {

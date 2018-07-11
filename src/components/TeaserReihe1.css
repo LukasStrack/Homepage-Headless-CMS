@@ -64,3 +64,19 @@
 	top: 200px;
 	right: 0;
 }
+
+.TeaserReihe1--isTeaserBright{
+	color: black;
+}
+
+.TeaserReihe1--isTeaserBright .TeaserReihe1__headline{
+	color: black;
+}
+
+.TeaserReihe1--isTeaserBright .TeaserReihe1__subline{
+	color: black;
+}
+
+.TeaserReihe1--isTeaserBright .TeaserReihe1__link{
+	color: black;
+}

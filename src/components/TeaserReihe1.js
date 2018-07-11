@@ -16,7 +16,8 @@ class TeaserReihe1 extends React.Component
 				href="#"
 				className={classcat([{
 					"TeaserReihe1": true,
-					"TeaserReihe1--isBig": this.props.isBig === true
+					"TeaserReihe1--isBig": this.props.isBig === true,
+					"TeaserReihe1--isTeaserBright": this.props.isTeaserBright === true
 				}])}
 				style={{backgroundImage: this.props.backgroundImage? "url("+this.props.backgroundImage.file.url+")": "none"}}
 			>

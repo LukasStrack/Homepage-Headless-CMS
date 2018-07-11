@@ -12,15 +12,12 @@ class UtilityItems extends React.Component
 	render()
 	{
 			return(
-			<div className="UtilityItems">
-			<ul>
-			<li>
-				<a>
-					<span>{this.props.title}</span>
+			<li className="utilities__item">
+				<a href={this.props.href} className="utilities__link">
+					<img className="utilities__image" src={this.props.picture.file.url} alt={this.props.title}/>
+					<span title={this.props.title}>{this.props.title}</span>
 				</a>				
 			</li>
-			</ul>
-			</div>
 			);					
 	}
 }

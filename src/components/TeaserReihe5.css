@@ -15,7 +15,7 @@
 	flex-basis: 100%;
 }
 
-.Teaser__content{
+.TeaserReihe5__content{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -23,7 +23,7 @@
 	align-items: center;
 }
 
-.Teaser__headline{
+.TeaserReihe5__headline{
 	color: white;
 	font-size: 48px;	
 	text-align: center;
@@ -32,7 +32,7 @@
 	font-weight: 700;
 }
 
-.Teaser__subline{
+.TeaserReihe5__subline{
 	color: white;
 	font-size: 24px;	
 	text-align: center;
@@ -40,7 +40,7 @@
 	font-family: "TeleGroteskScreen";
 }
 
-.Teaser__link{
+.TeaserReihe5__link{
 	color: white;
 	padding: 12px;
 	border: 1px solid #B3b3b3;
@@ -50,16 +50,16 @@
 	font-family: "TeleGroteskScreen";
 }
 
-.Teaser__link:hover{
+.TeaserReihe5__link:hover{
 	background-color: #e20074;
 }
 
-.Teaser__textBlock{
+.TeaserReihe5__textBlock{
 	max-width: 420px;
 	position: relative;
 }
 
-.Teaser__bubble{
+.TeaserReihe5__bubble{
 	position: absolute;
 	top: 200px;
 	right: 0;

@@ -12,4 +12,5 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`
   ],
+  pathPrefix: `//www.telekom.de/resources/gatsby/`,
 }

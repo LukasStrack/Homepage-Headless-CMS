@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Notfallbox.css";
 import classcat from "classcat";
+import Link from 'gatsby-link'
 
 class Notfallbox extends React.Component
 {
@@ -18,6 +19,9 @@ class Notfallbox extends React.Component
 					{this.props.beschreibung}
 					<br/>
 					<a href={this.props.href}>{this.props.link}</a>
+					<br/>
+					<Link to="/page-2/">Go to page 2</Link>
+					<a href="/page-2/">Go to page 2</a>
 				</p>
 			</div>
 			);					

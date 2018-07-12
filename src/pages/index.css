@@ -52,8 +52,7 @@ table {
 	box-sizing: border-box;
 	line-height: 1.333;
 	font-size: 18px;
-	font-family : "TeleGroteskScreen";
-	font-weight: 400;
+	font-family : "TeleGroteskScreen-Regular";
 	background-color: #D0D0D0;
 }
 
@@ -84,29 +83,21 @@ table {
 
 @font-face {
     font-family : "TeleGroteskScreen-Thin";
-    font-weight : 300;
-    font-style  : normal;
     src         : url("/fonts/telegroteskscreen-thin.woff") format("woff")
 }
 
 @font-face {
     font-family : "TeleGroteskScreen-Regular";
-    font-weight : 400;
-    font-style  : normal;
     src         : url("/fonts/telegroteskscreen-regular.woff") format("woff")
 }
 
 @font-face {
     font-family : "TeleGroteskScreen-Medium";
-    font-style  : normal;
-    font-weight : 600;
     src         : url("/fonts/telegroteskscreen-medium.woff") format("woff");
 }
 
 @font-face {
     font-family : "TeleGroteskScreen-Bold";
-    font-style  : normal;
-    font-weight : 700;
     src         : url("/fonts/telegroteskscreen-bold.woff") format("woff");
 }
 
@@ -117,7 +108,5 @@ table {
 
 @font-face {
     font-family : "tsde-icon-new";
-    font-style  : normal;
-    font-weight : 400;
     src         : url("/fonts/tsde-icon-new.woff") format("woff");
 }

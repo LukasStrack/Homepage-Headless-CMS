@@ -1,6 +1,5 @@
 .Teaser{
-	height: 520px;
-	flex-basis: calc(50% - 6px);
+	height: 346px;
 	flex-grow: 0;
 	flex-shrink: 0;
 	background-size: cover;	
@@ -9,10 +8,6 @@
 	text-decoration: none;
 	box-sizing: border-box;
 	margin-bottom: 12px;
-}
-
-.Teaser--isBig{
-	flex-basis: 100%;
 }
 
 .Teaser--isBig .Teaser__textBlock{
@@ -117,13 +112,28 @@
 	padding: 30px;
 }
 
-@media screen and (min-width: 640px){
+@media screen and (max-width: 641px){
+.Teaser{
+	flex-basis: 100%;
+}
+}
+
+@media screen and (min-width: 641px){
 .Teaser__subline {
     max-width: 354px;
+}
+.Teaser{
+	flex-basis: calc(50% - 6px);
+}
+.Teaser--isBig{
+	flex-basis: 100%;
 }
 }
 
 @media screen and (min-width: 768px){
+.Teaser{
+	height: 420px;
+}
 .Teaser__headline{
 	font-size: 2.25rem;
 	line-height: 2.5rem;
@@ -142,6 +152,9 @@
 }
 
 @media screen and (min-width: 1025px){
+.Teaser{
+	height: 520px;
+}
 .Teaser__headline{
 	font-size: 3rem;
 	line-height: 3.375rem;

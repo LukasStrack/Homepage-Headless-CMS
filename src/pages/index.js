@@ -114,6 +114,7 @@ export const homepageQuery = graphql
 		  button
 		  href
 		  isBig
+		  isTeaserBright
 		  backgroundImage {
 			file {
 			  url

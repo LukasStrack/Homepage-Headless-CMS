@@ -16,7 +16,7 @@ class Teaser extends React.Component
 	{
 			return(
 			<a 
-				href="#"
+				href={this.props.href}
 				className={classcat([{
 					"Teaser": true,
 					"Teaser--isBig": this.props.isBig === true,

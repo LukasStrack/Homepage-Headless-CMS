@@ -1,18 +1,36 @@
 .Buehne{
-	height: 520px;
-	flex-basis: calc(50% - 6px);
+	height: 346px;
 	flex-grow: 0;
 	flex-shrink: 0;
 	background-size: cover;	
 	background-position: 50% 50%;
-	padding: 48px;
+	padding: 6px;
 	text-decoration: none;
 	box-sizing: border-box;
 	margin-bottom: 12px;
 }
 
-.Buehne--isBig{
-	flex-basis: 100%;
+.Buehne--isBig .Buehne__textBlock{
+	max-width: 100%;
+}
+
+.Buehne--isTeaserBright .Buehne__headline{
+	color: #383838;
+}
+
+.Buehne--isTeaserBright .Buehne__subline{
+	color: #383838;
+	max-width: 100%;
+}
+
+.Buehne--isTeaserBright .Buehne__link{
+	color: #383838;
+	border-color: #383838;
+}
+
+.Buehne--isTeaserBright .Buehne__link:hover{
+	color: white;
+	border-color: #e20074;
 }
 
 .Buehne__content{
@@ -21,33 +39,45 @@
 	justify-content: space-between;
 	height: 100%;
 	align-items: center;
+	text-align: center;
 }
 
 .Buehne__headline{
-	color: white;
-	font-size: 48px;	
-	text-align: center;
+	color: #fff;
+	font-size: 1.6875rem;
+	line-height: 1.875rem;
+	display: inline-block;
+	margin: 29px auto 0;
+	padding: 0;
 	text-transform: uppercase;
-	font-family: "TeleGroteskScreen";
-	font-weight: 700;
+	font-family: "TeleGroteskScreen-Ultra";
 }
 
 .Buehne__subline{
-	color: white;
-	font-size: 24px;	
-	text-align: center;
-	text-transform: uppercase;
-	font-family: "TeleGroteskScreen";
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    color: #fff;
+    display: block;
+    font-family: "TeleGroteskScreen-Regular";
+    margin: 6px auto 0;
+    padding: 0;
+    text-transform: uppercase;
+	max-width: 296px;
 }
 
 .Buehne__link{
-	color: white;
+	font-size: 1.3125rem;
+	line-height: 1.5rem;
+	background-color: transparent;
+    border-color: #fff;
+    color: #fff;
+	font-family: "TeleGroteskScreen-Bold";
 	padding: 12px;
 	border: 1px solid #B3b3b3;
-	border-radius: -4px;
-	text-align: center;
-	transition: background-color 0.2s ease-in-out;
-	font-family: "TeleGroteskScreen";
+	border-radius: 4px;
+	text-transform: uppercase;
+	margin: 24px;
+    white-space: nowrap;
 }
 
 .Buehne__link:hover{
@@ -55,12 +85,59 @@
 }
 
 .Buehne__textBlock{
-	max-width: 420px;
+	max-width: 600px;
 	position: relative;
 }
 
-.Buehne__bubble{
-	position: absolute;
-	top: 200px;
-	right: 0;
+@media screen and (max-width: 641px){
+.Buehne{
+	flex-basis: 100%;
+}
+}
+
+@media screen and (min-width: 641px){
+.Buehne__subline {
+    max-width: 354px;
+}
+.Buehne{
+	flex-basis: calc(50% - 6px);
+}
+.Buehne--isBig{
+	flex-basis: 100%;
+}
+}
+
+@media screen and (min-width: 768px){
+.Buehne{
+	height: 420px;
+}
+.Buehne__headline{
+	font-size: 2.25rem;
+	line-height: 2.5rem;
+    margin-top: 39px;
+}
+.Buehne__subline{
+    font-size: 1.3125rem;
+	line-height: 1.6875rem;
+}
+}
+
+@media screen and (min-width: 1025px){
+.Buehne{
+	height: 520px;
+}
+.Buehne__headline{
+	font-size: 3rem;
+	line-height: 3.375rem;
+    margin-top: 48px;
+}
+.Buehne__subline{
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+	max-width: 426px;
+	margin-top: 7px;
+}
+.Buehne__link {
+    margin: 48px;
+}
 }

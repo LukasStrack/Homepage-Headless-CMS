@@ -68,17 +68,10 @@ table {
 }
 
 .round_dark {
-	width: 154px;
-	height: 154px;
-	border-radius: 50%;
-	background-color: #383838;
-    border-color: #383838;
-	border: 4px solid transparent;
 	display: flex;
 	flex-direction: column;
     justify-content: center;
 	text-align: center;
-	margin: 0px 10px 0px;
 }
 
 @font-face {

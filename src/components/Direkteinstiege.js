@@ -12,9 +12,9 @@ class Direkteinstiege extends React.Component
 	render()
 	{
 			return(
-				<li>
-					<a href={this.props.href.href}>
-						<div className="svg" dangerouslySetInnerHTML={{ __html: this.props.svg.svg }}></div>
+				<li className="listItem">
+					<a className="roundItem" href={this.props.href.href}>
+						<span className="svg" dangerouslySetInnerHTML={{ __html: this.props.svg.svg }}></span>
 						<span className="label">{this.props.title}</span>
 					</a>
 				</li>

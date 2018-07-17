@@ -35,25 +35,21 @@ class index extends React.Component
 				></Buehne>
 			}
 			</div>
-			<div className="Direkteinstiege">
+			<nav className="Direkteinstiege">
 			{
-				<nav className="nav">
-					<ul className="list">
-						{
-						this.props.data.contentfulDirekteinstiege.direkteinstieg.map((direkteinstieg, index) => (
-							<div className="round_dark">
-								<Direkteinstiege
-									{
-										...direkteinstieg
-									}
-								></Direkteinstiege>
-							</div>
-						))
-						}
-					</ul>
-				</nav>
+				<ul className="list">
+					{
+					this.props.data.contentfulDirekteinstiege.direkteinstieg.map((direkteinstieg, index) => (
+							<Direkteinstiege
+								{
+									...direkteinstieg
+								}
+							></Direkteinstiege>
+					))
+					}
+				</ul>
 			}
-			</div>
+			</nav>
 			<div>
 			{
 				this.props.data.contentfulNotfallbox.isNotfallboxActive === true &&
@@ -110,6 +106,7 @@ export const homepageQuery = graphql
 	  contentfulBuehne {
 		buehne {
 		  title
+		  title2
 		  description
 		  button
 		  href

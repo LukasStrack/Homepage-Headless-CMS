@@ -12,6 +12,7 @@ class Teaser extends React.Component
 	static propTypes = {	
 		title: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired
 		}
+		
 	render()
 	{
 			return(
@@ -20,9 +21,9 @@ class Teaser extends React.Component
 				className={classcat([{
 					"Teaser": true,
 					"Teaser--isBig": this.props.isBig === true,
-					"Teaser--isTeaserBright": this.props.isTeaserBright === true
+					"Teaser--isTeaserBright": this.props.isTeaserBright === true,
 				}])}
-				style={{backgroundImage: this.props.backgroundImage? "url("+this.props.backgroundImage.file.url+")": "none"}}
+				style={{backgroundImage: this.props.backgroundImage? "url("+this.props.backgroundImage.file.url+")" : "linear-gradient("+this.props.hintergrundFarbe+", "+this.props.hintergrundFarbe+")"}}
 			>
 				<div className="Teaser__content">
 					<div className="Teaser__textBlock">
@@ -37,9 +38,26 @@ class Teaser extends React.Component
 						  </span>
 						</aside>
 					}
+					{
+						this.props.magentaMobilTeaserImage !== null &&
+						<img className="magentaMobilTeaserImage" src={this.props.magentaMobilTeaserImage.file.url} />
+					}
+					{
+						this.props.festnetzTeaserImage !== null &&
+						<img className="festnetzTeaserImage" src={this.props.festnetzTeaserImage.file.url} />
+					}
+					{
+						this.props.familyCardTeaserImage !== null &&
+						<img className="familyCardTeaserImage" src={this.props.familyCardTeaserImage.file.url} />
+					}
+					{
+						this.props.huaweiTeaserImage !== null &&
+						<img className="huaweiTeaserImage" src={this.props.huaweiTeaserImage.file.url} />
+					}
 					<div className="Teaser__link" onClick={this.props.handleClick}>{this.props.button}</div>
 				</div>				
 			</a>
+
 			);					
 	}
 }

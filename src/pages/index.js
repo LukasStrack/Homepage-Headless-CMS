@@ -145,6 +145,7 @@ export const homepageQuery = graphql
 		  href
 		  isBig
 		  isTeaserBright
+		  hintergrundFarbe
 		  stoerer {
 			description
 			color
@@ -153,6 +154,26 @@ export const homepageQuery = graphql
 			}
 		  }
 		  backgroundImage {
+			file {
+			  url
+			}
+		  }
+		  magentaMobilTeaserImage {
+			file {
+			  url
+			}
+		  }
+		  festnetzTeaserImage {
+			file {
+			  url
+			}
+		  }
+		  familyCardTeaserImage {
+			file {
+			  url
+			}
+		  }
+		  huaweiTeaserImage {
 			file {
 			  url
 			}

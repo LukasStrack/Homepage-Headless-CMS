@@ -112,6 +112,40 @@
 	padding: 30px;
 }
 
+
+.hintergrundFarbe{
+	
+}
+
+.magentaMobilTeaserImage{
+	width: 252px;
+}
+
+.festnetzMobilTeaserImage{
+
+}
+
+.familyCardMobilTeaserImage{
+    max-width: 140px;
+    margin-top: 10px;
+}
+
+.huaweiTeaserImage{
+    bottom: 90px;
+    width: 155px;
+}
+
+@media screen and (min-width: 1025px)
+.huaweiTeaserImage .Teaser__headline {
+    width: 800px;
+}
+
+@media screen and (min-width: 531px){
+.magentaMobilTeaserImage{
+    width: 306px;
+}
+}
+
 @media screen and (max-width: 641px){
 .Teaser{
 	flex-basis: 100%;
@@ -127,6 +161,15 @@
 }
 .Teaser--isBig{
 	flex-basis: 100%;
+}
+.magentaMobilTeaserImage{
+    width: 186px;
+}
+}
+
+@media screen and (min-width: 648px){
+.magentaMobilTeaserImage{
+    width: 254px;
 }
 }
 
@@ -148,6 +191,13 @@
 	line-height: 1.5rem;
     height: 132px;
     width: 132px;
+}
+.familyCardMobilTeaserImage{
+    max-width: 190px;
+}
+.huaweiTeaserImage{
+    bottom: 70px;
+    width: 240px;
 }
 }
 
@@ -174,5 +224,26 @@
 	line-height: 1.75rem;
     height: 152px;
     width: 152px;
+}
+.magentaMobilTeaserImage{
+    width: 296px;
+}
+.familyCardMobilTeaserImage{
+    max-width: 260px;
+    margin-top: 20px;
+}
+.huaweiTeaserImage{
+    bottom: 105px;
+    width: 270px;
+}
+}
+
+@media screen and (min-width: 1280px){
+.magentaMobilTeaserImage{
+    width: 426px;
+}
+.huaweiTeaserImage{
+    bottom: 100px;
+    width: 350px
 }
 }

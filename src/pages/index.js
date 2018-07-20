@@ -50,7 +50,7 @@ class index extends React.Component
 				</ul>
 			}
 			</nav>
-			<div>
+			<div className="NotfallboxContainer">
 			{
 				this.props.data.contentfulNotfallbox.isNotfallboxActive === true &&
 				<Notfallbox
@@ -146,6 +146,7 @@ export const homepageQuery = graphql
 		  isBig
 		  isTeaserBright
 		  hintergrundFarbe
+		  tieserTyp
 		  stoerer {
 			description
 			color

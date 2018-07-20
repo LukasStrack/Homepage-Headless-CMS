@@ -1,4 +1,4 @@
-.Teaser{
+.HighspeedInternet{
 	height: 346px;
 	flex-grow: 0;
 	flex-shrink: 0;
@@ -14,7 +14,7 @@
 	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Teaser__headline{
+.Teaser--isTeaserBright .HighspeedInternet__headline{
 	color: #383838;
 }
 

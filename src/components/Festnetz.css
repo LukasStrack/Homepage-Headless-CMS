@@ -1,4 +1,4 @@
-.Teaser{
+.Festnetz{
 	height: 346px;
 	flex-grow: 0;
 	flex-shrink: 0;
@@ -10,30 +10,30 @@
 	margin-bottom: 12px;
 }
 
-.Teaser--isBig .Teaser__textBlock{
+.Teaser--isBig .Festnetz__textBlock{
 	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Teaser__headline{
+.Teaser--isTeaserBright .Festnetz__headline{
 	color: #383838;
 }
 
-.Teaser--isTeaserBright .Teaser__subline{
+.Teaser--isTeaserBright .Festnetz__subline{
 	color: #383838;
 	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Teaser__link{
+.Teaser--isTeaserBright .Festnetz__link{
 	color: #383838;
 	border-color: #383838;
 }
 
-.Teaser--isTeaserBright .Teaser__link:hover{
+.Teaser--isTeaserBright .Festnetz__link:hover{
 	color: white;
 	border-color: #e20074;
 }
 
-.Teaser__content{
+.Festnetz__content{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -42,7 +42,7 @@
 	text-align: center;
 }
 
-.Teaser__headline{
+.Festnetz__headline{
 	color: #fff;
 	font-size: 1.6875rem;
 	line-height: 1.875rem;
@@ -53,7 +53,7 @@
 	font-family: "TeleGroteskScreen-Ultra";
 }
 
-.Teaser__subline{
+.Festnetz__subline{
     font-size: 1.125rem;
     line-height: 1.5rem;
     color: #fff;
@@ -65,7 +65,7 @@
 	max-width: 296px;
 }
 
-.Teaser__link{
+.Festnetz__link{
 	font-size: 1.3125rem;
 	line-height: 1.5rem;
 	background-color: transparent;
@@ -80,11 +80,11 @@
     white-space: nowrap;
 }
 
-.Teaser__link:hover{
+.Festnetz__link:hover{
 	background-color: #e20074;
 }
 
-.Teaser__textBlock{
+.Festnetz__textBlock{
 	max-width: 600px;
 	position: relative;
 }
@@ -147,16 +147,16 @@
 }
 
 @media screen and (max-width: 641px){
-.Teaser{
+.Festnetz{
 	flex-basis: 100%;
 }
 }
 
 @media screen and (min-width: 641px){
-.Teaser__subline {
+.Festnetz__subline {
     max-width: 354px;
 }
-.Teaser{
+.Festnetz{
 	flex-basis: calc(50% - 6px);
 }
 .Teaser--isBig{
@@ -174,15 +174,15 @@
 }
 
 @media screen and (min-width: 768px){
-.Teaser{
+.Festnetz{
 	height: 420px;
 }
-.Teaser__headline{
+.Festnetz__headline{
 	font-size: 2.25rem;
 	line-height: 2.5rem;
     margin-top: 39px;
 }
-.Teaser__subline{
+.Festnetz__subline{
     font-size: 1.3125rem;
 	line-height: 1.6875rem;
 }
@@ -202,21 +202,21 @@
 }
 
 @media screen and (min-width: 1025px){
-.Teaser{
+.Festnetz{
 	height: 520px;
 }
-.Teaser__headline{
+.Festnetz__headline{
 	font-size: 3rem;
 	line-height: 3.375rem;
     margin-top: 48px;
 }
-.Teaser__subline{
+.Festnetz__subline{
     font-size: 1.5rem;
     line-height: 1.75rem;
 	max-width: 426px;
 	margin-top: 7px;
 }
-.Teaser__link {
+.Festnetz__link {
     margin: 48px;
 }
 .badge__round{
@@ -246,12 +246,4 @@
     bottom: 100px;
     width: 350px
 }
-}
-
-.Teaser--isHignspeedInternet{
-	
-}
-
-.Teaser--isHuaweiAktion{
-	
 }

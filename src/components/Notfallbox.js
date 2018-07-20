@@ -18,9 +18,10 @@ class Notfallbox extends React.Component
 				<p className="Notfallbox__description">
 					{this.props.beschreibung}
 					<br/>
-					<a href={this.props.href}>{this.props.link}</a>
+					<a className="Notfallbox__link" href={this.props.href}>{this.props.link}</a>
 					<br/>
 					<Link to="/page-2/">Go to page 2</Link>
+					<br/>
 					<a href="/page-2/">Go to page 2</a>
 				</p>
 			</div>

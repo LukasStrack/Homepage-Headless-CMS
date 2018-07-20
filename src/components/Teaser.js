@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./Teaser.css";
+import "./Festnetz.css";
 import classcat from "classcat";
 
 class Teaser extends React.Component
@@ -22,12 +23,28 @@ class Teaser extends React.Component
 					"Teaser": true,
 					"Teaser--isBig": this.props.isBig === true,
 					"Teaser--isTeaserBright": this.props.isTeaserBright === true,
+					"HignspeedInternet": this.props.tieserTyp === "Highspeed-Internet",
+					"HuaweiAktion": this.props.tieserTyp === "Huawei Aktion",
+					"EntertainTV": this.props.tieserTyp === "Entertain TV",
+					"MagentaSmarthome": this.props.tieserTyp === "MagentaSmarthome",
+					"Hundetracker": this.props.tieserTyp === "Hundetracker",
+					"MagentaMobil": this.props.tieserTyp === "Magenta Mobil",
+					"Festnetz": this.props.tieserTyp === "Festnetz",
+					"TerminVereinbarung": this.props.tieserTyp === "Termin-Vereinbarung",
+					"FamilyCard": this.props.tieserTyp === "Family Card"
 				}])}
 				style={{backgroundImage: this.props.backgroundImage? "url("+this.props.backgroundImage.file.url+")" : "linear-gradient("+this.props.hintergrundFarbe+", "+this.props.hintergrundFarbe+")"}}
 			>
 				<div className="Teaser__content">
 					<div className="Teaser__textBlock">
+					{
+						this.props.tieserTyp !== null &&
+						<h2 className={this.props.tieserTyp + "__headline"}>{this.props.title}</h2>
+					}
+					{
+						this.props.tieserTyp == null &&
 						<h2 className="Teaser__headline">{this.props.title}</h2>
+					}
 						<p className="Teaser__subline">{this.props.description}</p>
 					</div>
 					{

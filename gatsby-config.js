@@ -7,7 +7,8 @@ module.exports = {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: 'as7rlolwgmwd',
-        accessToken: '847dbeffad5ae684355d467a8ef3db801945b7910021990d510e674d63c42435'
+        accessToken: '93ccd6984977c29ee88e004f030b44e0f645eaea1cc2d5a8bb8df989d2650851',
+		host: 'preview.contentful.com'
       }
     },
     `gatsby-plugin-react-helmet`

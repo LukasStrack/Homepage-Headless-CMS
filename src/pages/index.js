@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import Header from '../components/Header'
 import Buehne from '../components/Buehne'
 import Direkteinstiege from '../components/Direkteinstiege'
 import Notfallbox from '../components/Notfallbox'
 import Teaser from '../components/Teaser'
 import UtilityItems from '../components/UtilityItems'
-import Footer from '../components/Footer'
 import "./index.css"	
 
 
@@ -106,12 +104,13 @@ export const homepageQuery = graphql
 	  contentfulBuehne {
 		buehne {
 		  title
-		  title2
+		  responsiveTitle
 		  description
 		  button
 		  href
 		  isBig
 		  isTeaserBright
+		  buttonColor
 		  backgroundImage {
 			file {
 			  url
@@ -145,7 +144,7 @@ export const homepageQuery = graphql
 		  href
 		  isBig
 		  isTeaserBright
-		  hintergrundFarbe
+		  buttonColor
 		  tieserTyp
 		  stoerer {
 			description
@@ -159,22 +158,7 @@ export const homepageQuery = graphql
 			  url
 			}
 		  }
-		  magentaMobilTeaserImage {
-			file {
-			  url
-			}
-		  }
-		  festnetzTeaserImage {
-			file {
-			  url
-			}
-		  }
-		  familyCardTeaserImage {
-			file {
-			  url
-			}
-		  }
-		  huaweiTeaserImage {
+		  contentImage {
 			file {
 			  url
 			}

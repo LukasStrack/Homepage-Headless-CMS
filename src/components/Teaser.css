@@ -28,9 +28,18 @@
 	border-color: #383838;
 }
 
-.Teaser--isTeaserBright .Teaser__link:hover{
+.Teaser--buttonColor .Teaser__link{
+	color: #383838;
+	border-color: #383838;
+}
+
+.Teaser--buttonColor .Teaser__link:hover{
 	color: white;
 	border-color: #e20074;
+}
+
+.Teaser__link:hover{
+	background-color: #e20074;
 }
 
 .Teaser__content{
@@ -80,16 +89,12 @@
     white-space: nowrap;
 }
 
-.Teaser__link:hover{
-	background-color: #e20074;
-}
-
 .Teaser__textBlock{
 	max-width: 600px;
 	position: relative;
 }
 
-.badge__round{
+.Teaser__badge__round{
 	font-size: 1rem;
 	line-height: 1.125rem;
 	color: white;
@@ -103,47 +108,13 @@
 	margin-left: 50%;
 }
 
-.Teaser--isBig .badge__round{
+.Teaser--isBig .Teaser__badge__round{
 	margin-left: 0%;
 }
 
-.badge_css{
+.Teaser__badge_css{
 	margin: auto;
 	padding: 30px;
-}
-
-
-.hintergrundFarbe{
-	
-}
-
-.magentaMobilTeaserImage{
-	width: 252px;
-}
-
-.festnetzMobilTeaserImage{
-
-}
-
-.familyCardMobilTeaserImage{
-    max-width: 140px;
-    margin-top: 10px;
-}
-
-.huaweiTeaserImage{
-    bottom: 90px;
-    width: 155px;
-}
-
-@media screen and (min-width: 1025px)
-.huaweiTeaserImage .Teaser__headline {
-    width: 800px;
-}
-
-@media screen and (min-width: 531px){
-.magentaMobilTeaserImage{
-    width: 306px;
-}
 }
 
 @media screen and (max-width: 641px){
@@ -162,15 +133,6 @@
 .Teaser--isBig{
 	flex-basis: 100%;
 }
-.magentaMobilTeaserImage{
-    width: 186px;
-}
-}
-
-@media screen and (min-width: 648px){
-.magentaMobilTeaserImage{
-    width: 254px;
-}
 }
 
 @media screen and (min-width: 768px){
@@ -186,18 +148,11 @@
     font-size: 1.3125rem;
 	line-height: 1.6875rem;
 }
-.badge__round{
+.Teaser__badge__round{
 	font-size: 1.25rem;
 	line-height: 1.5rem;
     height: 132px;
     width: 132px;
-}
-.familyCardMobilTeaserImage{
-    max-width: 190px;
-}
-.huaweiTeaserImage{
-    bottom: 70px;
-    width: 240px;
 }
 }
 
@@ -219,39 +174,10 @@
 .Teaser__link {
     margin: 48px;
 }
-.badge__round{
+.Teaser__badge__round{
 	font-size: 1.5rem;
 	line-height: 1.75rem;
     height: 152px;
     width: 152px;
 }
-.magentaMobilTeaserImage{
-    width: 296px;
-}
-.familyCardMobilTeaserImage{
-    max-width: 260px;
-    margin-top: 20px;
-}
-.huaweiTeaserImage{
-    bottom: 105px;
-    width: 270px;
-}
-}
-
-@media screen and (min-width: 1280px){
-.magentaMobilTeaserImage{
-    width: 426px;
-}
-.huaweiTeaserImage{
-    bottom: 100px;
-    width: 350px
-}
-}
-
-.Teaser--isHignspeedInternet{
-	
-}
-
-.Teaser--isHuaweiAktion{
-	
 }

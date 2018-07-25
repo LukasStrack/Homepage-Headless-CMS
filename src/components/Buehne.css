@@ -22,14 +22,18 @@
 	max-width: 100%;
 }
 
-.Buehne--isTeaserBright .Buehne__link{
+.Buehne--buttonColor .Buehne__link{
 	color: #383838;
 	border-color: #383838;
 }
 
-.Buehne--isTeaserBright .Buehne__link:hover{
+.Buehne--buttonColor .Buehne__link:hover{
 	color: white;
 	border-color: #e20074;
+}
+
+.Buehne__link:hover{
+	background-color: #e20074;
 }
 
 .Buehne__content{
@@ -88,10 +92,6 @@
 	text-transform: uppercase;
 	position: absolute;
 	bottom: 30px;
-}
-
-.Buehne__link:hover{
-	background-color: #e20074;
 }
 
 .Buehne__textBlock{

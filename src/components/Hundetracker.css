@@ -1,4 +1,4 @@
-.Teaser{
+.Hundetracker{
 	height: 346px;
 	flex-grow: 0;
 	flex-shrink: 0;
@@ -10,30 +10,34 @@
 	margin-bottom: 12px;
 }
 
-.Teaser--isBig .Teaser__textBlock{
+.Teaser--isBig .Hundetracker__textBlock{
 	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Teaser__headline{
+.Teaser--isTeaserBright .Hundetracker__headline{
 	color: #383838;
 }
 
-.Teaser--isTeaserBright .Teaser__subline{
+.Teaser--isTeaserBright .Hundetracker__subline{
 	color: #383838;
-	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Teaser__link{
+.Teaser--buttonColor .Hundetracker__link{
 	color: #383838;
 	border-color: #383838;
 }
 
-.Teaser--isTeaserBright .Teaser__link:hover{
+.Teaser--buttonColor .Hundetracker__link:hover{
 	color: white;
 	border-color: #e20074;
+	background-color: #e20074;
 }
 
-.Teaser__content{
+.Hundetracker__link:hover{
+	background-color: #e20074;
+}
+
+.Hundetracker__content{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -42,7 +46,7 @@
 	text-align: center;
 }
 
-.Teaser__headline{
+.Hundetracker__headline{
 	color: #fff;
 	font-size: 1.6875rem;
 	line-height: 1.875rem;
@@ -51,9 +55,10 @@
 	padding: 0;
 	text-transform: uppercase;
 	font-family: "TeleGroteskScreen-Ultra";
+	max-width: 296px;
 }
 
-.Teaser__subline{
+.Hundetracker__subline{
     font-size: 1.125rem;
     line-height: 1.5rem;
     color: #fff;
@@ -62,10 +67,10 @@
     margin: 6px auto 0;
     padding: 0;
     text-transform: uppercase;
-	max-width: 296px;
+	max-width: 285px;
 }
 
-.Teaser__link{
+.Hundetracker__link{
 	font-size: 1.3125rem;
 	line-height: 1.5rem;
 	background-color: transparent;
@@ -80,16 +85,12 @@
     white-space: nowrap;
 }
 
-.Teaser__link:hover{
-	background-color: #e20074;
-}
-
-.Teaser__textBlock{
+.Hundetracker__textBlock{
 	max-width: 600px;
 	position: relative;
 }
 
-.badge__round{
+.Hundetracker__badge__round{
 	font-size: 1rem;
 	line-height: 1.125rem;
 	color: white;
@@ -103,155 +104,75 @@
 	margin-left: 50%;
 }
 
-.Teaser--isBig .badge__round{
+.Teaser--isBig .Hundetracker__badge__round{
 	margin-left: 0%;
 }
 
-.badge_css{
+.Hundetracker__badge_css{
 	margin: auto;
 	padding: 30px;
 }
 
-
-.hintergrundFarbe{
-	
-}
-
-.magentaMobilTeaserImage{
-	width: 252px;
-}
-
-.festnetzMobilTeaserImage{
-
-}
-
-.familyCardMobilTeaserImage{
-    max-width: 140px;
-    margin-top: 10px;
-}
-
-.huaweiTeaserImage{
-    bottom: 90px;
-    width: 155px;
-}
-
-@media screen and (min-width: 1025px)
-.huaweiTeaserImage .Teaser__headline {
-    width: 800px;
-}
-
-@media screen and (min-width: 531px){
-.magentaMobilTeaserImage{
-    width: 306px;
-}
-}
-
 @media screen and (max-width: 641px){
-.Teaser{
+.Hundetracker{
 	flex-basis: 100%;
 }
 }
 
 @media screen and (min-width: 641px){
-.Teaser__subline {
-    max-width: 354px;
-}
-.Teaser{
+.Hundetracker{
 	flex-basis: calc(50% - 6px);
 }
 .Teaser--isBig{
 	flex-basis: 100%;
 }
-.magentaMobilTeaserImage{
-    width: 186px;
-}
-}
-
-@media screen and (min-width: 648px){
-.magentaMobilTeaserImage{
-    width: 254px;
-}
 }
 
 @media screen and (min-width: 768px){
-.Teaser{
+.Hundetracker{
 	height: 420px;
 }
-.Teaser__headline{
+.Hundetracker__headline{
 	font-size: 2.25rem;
 	line-height: 2.5rem;
     margin-top: 39px;
+	max-width: 365px;
 }
-.Teaser__subline{
+.Hundetracker__subline{
     font-size: 1.3125rem;
 	line-height: 1.6875rem;
+	max-width: 300px;
 }
-.badge__round{
+.Hundetracker__badge__round{
 	font-size: 1.25rem;
 	line-height: 1.5rem;
     height: 132px;
     width: 132px;
 }
-.familyCardMobilTeaserImage{
-    max-width: 190px;
-}
-.huaweiTeaserImage{
-    bottom: 70px;
-    width: 240px;
-}
 }
 
 @media screen and (min-width: 1025px){
-.Teaser{
+.Hundetracker{
 	height: 520px;
 }
-.Teaser__headline{
+.Hundetracker__headline{
 	font-size: 3rem;
 	line-height: 3.375rem;
     margin-top: 48px;
+	max-width: 510px;
 }
-.Teaser__subline{
+.Hundetracker__subline{
     font-size: 1.5rem;
     line-height: 1.75rem;
-	max-width: 426px;
 	margin-top: 7px;
 }
-.Teaser__link {
+.Hundetracker__link {
     margin: 48px;
 }
-.badge__round{
+.Hundetracker__badge__round{
 	font-size: 1.5rem;
 	line-height: 1.75rem;
     height: 152px;
     width: 152px;
 }
-.magentaMobilTeaserImage{
-    width: 296px;
-}
-.familyCardMobilTeaserImage{
-    max-width: 260px;
-    margin-top: 20px;
-}
-.huaweiTeaserImage{
-    bottom: 105px;
-    width: 270px;
-}
-}
-
-@media screen and (min-width: 1280px){
-.magentaMobilTeaserImage{
-    width: 426px;
-}
-.huaweiTeaserImage{
-    bottom: 100px;
-    width: 350px
-}
-}
-
-.Teaser--isHignspeedInternet{
-	
-}
-
-.Teaser--isHuaweiAktion{
-	
 }

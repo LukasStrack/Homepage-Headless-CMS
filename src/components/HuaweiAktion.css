@@ -1,4 +1,4 @@
-.Teaser{
+.HuaweiAktion{
 	height: 346px;
 	flex-grow: 0;
 	flex-shrink: 0;
@@ -10,30 +10,34 @@
 	margin-bottom: 12px;
 }
 
-.Teaser--isBig .Teaser__textBlock{
+.Teaser--isBig .HuaweiAktion__textBlock{
 	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Teaser__headline{
+.Teaser--isTeaserBright .HuaweiAktion__headline{
 	color: #383838;
 }
 
-.Teaser--isTeaserBright .Teaser__subline{
+.Teaser--isTeaserBright .HuaweiAktion__subline{
 	color: #383838;
 	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Teaser__link{
+.Teaser--buttonColor .HuaweiAktion__link{
 	color: #383838;
 	border-color: #383838;
 }
 
-.Teaser--isTeaserBright .Teaser__link:hover{
+.Teaser--buttonColor .HuaweiAktion__link:hover{
 	color: white;
 	border-color: #e20074;
 }
 
-.Teaser__content{
+.HuaweiAktion__link:hover{
+	background-color: #e20074;
+}
+
+.HuaweiAktion__content{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -42,7 +46,7 @@
 	text-align: center;
 }
 
-.Teaser__headline{
+.HuaweiAktion__headline{
 	color: #fff;
 	font-size: 1.6875rem;
 	line-height: 1.875rem;
@@ -51,9 +55,10 @@
 	padding: 0;
 	text-transform: uppercase;
 	font-family: "TeleGroteskScreen-Ultra";
+	max-width: 272px;
 }
 
-.Teaser__subline{
+.HuaweiAktion__subline{
     font-size: 1.125rem;
     line-height: 1.5rem;
     color: #fff;
@@ -62,10 +67,10 @@
     margin: 6px auto 0;
     padding: 0;
     text-transform: uppercase;
-	max-width: 296px;
+	max-width: 320px;
 }
 
-.Teaser__link{
+.HuaweiAktion__link{
 	font-size: 1.3125rem;
 	line-height: 1.5rem;
 	background-color: transparent;
@@ -78,18 +83,17 @@
 	text-transform: uppercase;
 	margin: 24px;
     white-space: nowrap;
+	z-index: 1;
+	display: inline-block;
+	text-decoration: none;
 }
 
-.Teaser__link:hover{
-	background-color: #e20074;
-}
-
-.Teaser__textBlock{
+.HuaweiAktion__textBlock{
 	max-width: 600px;
 	position: relative;
 }
 
-.badge__round{
+.HuaweiAktion__badge__round{
 	font-size: 1rem;
 	line-height: 1.125rem;
 	color: white;
@@ -98,160 +102,140 @@
 	text-transform: uppercase;
 	text-align: center;
 	font-family: "TeleGroteskScreen-Regular";
+	font-weight: bold;
 	height: 100px;
 	width: 100px;
-	margin-left: 50%;
 }
 
-.Teaser--isBig .badge__round{
-	margin-left: 0%;
+.Teaser--isBig .HuaweiAktion__badge__round{
+	font-size: 1.125rem;
+	line-height: 1.3125rem;
+	bottom: 90px;
+    font-family: "TeleGroteskScreen-Bold";
+    left: 20px;
+    text-align: center;
+    width: 100px;
 }
 
-.badge_css{
-	margin: auto;
-	padding: 30px;
+.HuaweiAktion__badge_css{
+	-webkit-box-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: flex;
+    height: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+	position: absolute;
 }
 
-
-.hintergrundFarbe{
-	
-}
-
-.magentaMobilTeaserImage{
-	width: 252px;
-}
-
-.festnetzMobilTeaserImage{
-
-}
-
-.familyCardMobilTeaserImage{
-    max-width: 140px;
-    margin-top: 10px;
-}
-
-.huaweiTeaserImage{
-    bottom: 90px;
+.HuaweiAktion__contentImage{
     width: 155px;
 }
 
-@media screen and (min-width: 1025px)
-.huaweiTeaserImage .Teaser__headline {
-    width: 800px;
+@media screen and (min-width: 380px){
+.HuaweiAktion__badge__round{
+	left: calc(50% - 165px);
+}
 }
 
-@media screen and (min-width: 531px){
-.magentaMobilTeaserImage{
-    width: 306px;
+@media screen and (min-width: 640px){
+.HuaweiAktion__badge__round{
+    bottom: 85px;
+    left: 20px;
 }
 }
 
 @media screen and (max-width: 641px){
-.Teaser{
+.HuaweiAktion{
 	flex-basis: 100%;
 }
 }
 
 @media screen and (min-width: 641px){
-.Teaser__subline {
-    max-width: 354px;
-}
-.Teaser{
+.HuaweiAktion{
 	flex-basis: calc(50% - 6px);
 }
 .Teaser--isBig{
 	flex-basis: 100%;
 }
-.magentaMobilTeaserImage{
-    width: 186px;
-}
-}
-
-@media screen and (min-width: 648px){
-.magentaMobilTeaserImage{
-    width: 254px;
-}
 }
 
 @media screen and (min-width: 768px){
-.Teaser{
+.HuaweiAktion{
 	height: 420px;
 }
-.Teaser__headline{
+.HuaweiAktion__headline{
 	font-size: 2.25rem;
 	line-height: 2.5rem;
     margin-top: 39px;
+	max-width: 360px;
 }
-.Teaser__subline{
+.HuaweiAktion__subline{
     font-size: 1.3125rem;
 	line-height: 1.6875rem;
+	max-width: 360px;
 }
-.badge__round{
-	font-size: 1.25rem;
-	line-height: 1.5rem;
+.HuaweiAktion__badge__round{
+	font-size: 1.4375rem;
+	line-height: 1.625rem;
     height: 132px;
+	bottom: 80px;
+    left: 20px;
     width: 132px;
 }
-.familyCardMobilTeaserImage{
-    max-width: 190px;
+.HuaweiAktion__badge_css{
+	font-size: 1.4375rem;
+    line-height: 1.625rem;
 }
-.huaweiTeaserImage{
-    bottom: 70px;
+.HuaweiAktion__contentImage{
     width: 240px;
 }
 }
 
 @media screen and (min-width: 1025px){
-.Teaser{
+.HuaweiAktion{
 	height: 520px;
 }
-.Teaser__headline{
+.HuaweiAktion__headline{
 	font-size: 3rem;
 	line-height: 3.375rem;
     margin-top: 48px;
+	max-width: none;
 }
-.Teaser__subline{
+.HuaweiAktion__subline{
     font-size: 1.5rem;
     line-height: 1.75rem;
-	max-width: 426px;
 	margin-top: 7px;
+	display: block;
 }
-.Teaser__link {
+.HuaweiAktion__link {
     margin: 48px;
 }
-.badge__round{
-	font-size: 1.5rem;
-	line-height: 1.75rem;
+.HuaweiAktion__badge__round{
+	font-size: 1.625rem;
+	line-height: 1.875rem;
     height: 152px;
     width: 152px;
+	bottom: 115px;
 }
-.magentaMobilTeaserImage{
-    width: 296px;
+.HuaweiAktion__badge_css{
+	font-size: 1.625rem;
+    line-height: 1.875rem;
 }
-.familyCardMobilTeaserImage{
-    max-width: 260px;
-    margin-top: 20px;
-}
-.huaweiTeaserImage{
-    bottom: 105px;
+.HuaweiAktion__contentImage{
     width: 270px;
 }
 }
 
-@media screen and (min-width: 1280px){
-.magentaMobilTeaserImage{
-    width: 426px;
+@media screen and (min-width: 1297px){
+.HuaweiAktion__badge__round{
+    bottom: 135px;
+    left: calc(50% - 300px);
 }
-.huaweiTeaserImage{
-    bottom: 100px;
-    width: 350px
-}
-}
-
-.Teaser--isHignspeedInternet{
-	
-}
-
-.Teaser--isHuaweiAktion{
-	
+.HuaweiAktion__contentImage{
+    width: 350px;
+}		
 }

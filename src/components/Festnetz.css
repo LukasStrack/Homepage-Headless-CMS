@@ -23,14 +23,18 @@
 	max-width: 100%;
 }
 
-.Teaser--isTeaserBright .Festnetz__link{
+.Teaser--buttonColor .Festnetz__link{
 	color: #383838;
 	border-color: #383838;
 }
 
-.Teaser--isTeaserBright .Festnetz__link:hover{
+.Teaser--buttonColor .Festnetz__link:hover{
 	color: white;
 	border-color: #e20074;
+}
+
+.Festnetz__link:hover{
+	background-color: #e20074;
 }
 
 .Festnetz__content{
@@ -51,6 +55,7 @@
 	padding: 0;
 	text-transform: uppercase;
 	font-family: "TeleGroteskScreen-Ultra";
+	max-width: 280px;
 }
 
 .Festnetz__subline{
@@ -62,7 +67,7 @@
     margin: 6px auto 0;
     padding: 0;
     text-transform: uppercase;
-	max-width: 296px;
+	max-width: 300px;
 }
 
 .Festnetz__link{
@@ -76,12 +81,8 @@
 	border: 1px solid #B3b3b3;
 	border-radius: 4px;
 	text-transform: uppercase;
-	margin: 24px;
+	margin: 0 24px 24px 24px;
     white-space: nowrap;
-}
-
-.Festnetz__link:hover{
-	background-color: #e20074;
 }
 
 .Festnetz__textBlock{
@@ -89,7 +90,7 @@
 	position: relative;
 }
 
-.badge__round{
+.Festnetz__badge__round{
 	font-size: 1rem;
 	line-height: 1.125rem;
 	color: white;
@@ -103,47 +104,17 @@
 	margin-left: 50%;
 }
 
-.Teaser--isBig .badge__round{
+.Teaser--isBig .Festnetz__badge__round{
 	margin-left: 0%;
 }
 
-.badge_css{
+.Festnetz__badge_css{
 	margin: auto;
 	padding: 30px;
 }
 
-
-.hintergrundFarbe{
-	
-}
-
-.magentaMobilTeaserImage{
-	width: 252px;
-}
-
-.festnetzMobilTeaserImage{
-
-}
-
-.familyCardMobilTeaserImage{
-    max-width: 140px;
-    margin-top: 10px;
-}
-
-.huaweiTeaserImage{
-    bottom: 90px;
-    width: 155px;
-}
-
-@media screen and (min-width: 1025px)
-.huaweiTeaserImage .Teaser__headline {
-    width: 800px;
-}
-
-@media screen and (min-width: 531px){
-.magentaMobilTeaserImage{
-    width: 306px;
-}
+.Festnetz__contentImage{
+	height: 27%;
 }
 
 @media screen and (max-width: 641px){
@@ -153,23 +124,11 @@
 }
 
 @media screen and (min-width: 641px){
-.Festnetz__subline {
-    max-width: 354px;
-}
 .Festnetz{
 	flex-basis: calc(50% - 6px);
 }
 .Teaser--isBig{
 	flex-basis: 100%;
-}
-.magentaMobilTeaserImage{
-    width: 186px;
-}
-}
-
-@media screen and (min-width: 648px){
-.magentaMobilTeaserImage{
-    width: 254px;
 }
 }
 
@@ -181,23 +140,18 @@
 	font-size: 2.25rem;
 	line-height: 2.5rem;
     margin-top: 39px;
+	max-width: 350px;
 }
 .Festnetz__subline{
     font-size: 1.3125rem;
 	line-height: 1.6875rem;
+	max-width: 350px;
 }
-.badge__round{
+.Festnetz__badge__round{
 	font-size: 1.25rem;
 	line-height: 1.5rem;
     height: 132px;
     width: 132px;
-}
-.familyCardMobilTeaserImage{
-    max-width: 190px;
-}
-.huaweiTeaserImage{
-    bottom: 70px;
-    width: 240px;
 }
 }
 
@@ -209,6 +163,7 @@
 	font-size: 3rem;
 	line-height: 3.375rem;
     margin-top: 48px;
+	max-width: 480px;
 }
 .Festnetz__subline{
     font-size: 1.5rem;
@@ -217,33 +172,24 @@
 	margin-top: 7px;
 }
 .Festnetz__link {
-    margin: 48px;
+    margin: 0 48px 48px 48px;
 }
-.badge__round{
+.Festnetz__badge__round{
 	font-size: 1.5rem;
 	line-height: 1.75rem;
     height: 152px;
     width: 152px;
 }
-.magentaMobilTeaserImage{
-    width: 296px;
-}
-.familyCardMobilTeaserImage{
-    max-width: 260px;
-    margin-top: 20px;
-}
-.huaweiTeaserImage{
-    bottom: 105px;
-    width: 270px;
+.Festnetz__contentImage{
+	height: 30%;
 }
 }
 
-@media screen and (min-width: 1280px){
-.magentaMobilTeaserImage{
-    width: 426px;
+@media screen and (min-width: 1250px){
+.Festnetz__contentImage{
+	height: 38%;
 }
-.huaweiTeaserImage{
-    bottom: 100px;
-    width: 350px
+.Festnetz__headline{
+	max-width: 640px;
 }
 }

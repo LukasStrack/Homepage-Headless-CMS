@@ -8,6 +8,7 @@
 	text-decoration: none;
 	box-sizing: border-box;
 	margin-bottom: 12px;
+	position: relative;
 }
 
 .Teaser--isBig .HuaweiAktion__textBlock{
@@ -81,7 +82,7 @@
 	border: 1px solid #B3b3b3;
 	border-radius: 4px;
 	text-transform: uppercase;
-	margin: 24px;
+	margin: 0 24px 24px 24px;
     white-space: nowrap;
 	z-index: 1;
 	display: inline-block;
@@ -94,8 +95,8 @@
 }
 
 .HuaweiAktion__badge__round{
-	font-size: 1rem;
-	line-height: 1.125rem;
+	font-size: 1.125rem;
+	line-height: 1.3125rem;
 	color: white;
 	border-radius: 50%;
 	transform: rotate(-7.5deg);
@@ -105,16 +106,7 @@
 	font-weight: bold;
 	height: 100px;
 	width: 100px;
-}
-
-.Teaser--isBig .HuaweiAktion__badge__round{
-	font-size: 1.125rem;
-	line-height: 1.3125rem;
-	bottom: 90px;
-    font-family: "TeleGroteskScreen-Bold";
-    left: 20px;
-    text-align: center;
-    width: 100px;
+	position: absolute;
 }
 
 .HuaweiAktion__badge_css{
@@ -135,9 +127,10 @@
     width: 155px;
 }
 
-@media screen and (min-width: 380px){
+@media screen and (max-width: 640px){
 .HuaweiAktion__badge__round{
 	left: calc(50% - 165px);
+	bottom: 85px
 }
 }
 
@@ -200,7 +193,7 @@
 	height: 520px;
 }
 .HuaweiAktion__headline{
-	font-size: 3rem;
+	font-size: 2.95rem;
 	line-height: 3.375rem;
     margin-top: 48px;
 	max-width: none;
@@ -212,7 +205,7 @@
 	display: block;
 }
 .HuaweiAktion__link {
-    margin: 48px;
+    	margin: 0 48px 48px 48px;
 }
 .HuaweiAktion__badge__round{
 	font-size: 1.625rem;
@@ -228,6 +221,18 @@
 .HuaweiAktion__contentImage{
     width: 270px;
 }
+}
+
+@media screen and (min-width: 1088px){
+.HuaweiAktion__headline{
+	max-width: 500px;
+}		
+}
+
+@media screen and (min-width: 1278px){
+.HuaweiAktion__headline{
+	max-width: none;
+}		
 }
 
 @media screen and (min-width: 1297px){

@@ -93,21 +93,34 @@
 	line-height: 1.125rem;
 	color: white;
 	border-radius: 50%;
+	overflow: hidden;
+	padding: 3px;
+	position: relative;
 	transform: rotate(-7.5deg);
 	text-transform: uppercase;
-	text-align: center;
 	font-family: "TeleGroteskScreen-Regular";
 	width: 100px;
 	height: 100px;
+	margin: 0 0 .4em;
+}
+
+.EntertainTV__badge_css{
+	-webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
 .Teaser--isBig .EntertainTV__badge__round{
 	margin-left: 0%;
 }
 
-.EntertainTV__badge_css{
-	margin: auto;
-}
 
 @media screen and (max-width: 641px){
 .EntertainTV{

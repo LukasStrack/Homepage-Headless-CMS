@@ -53,6 +53,15 @@ class Teaser extends React.Component
 							<p className={this.props.tieserTyp + "__subline"}>{this.props.description}</p>
 						</div>
 						{
+							this.props.inputField !== null &&
+							<form className={this.props.tieserTyp + "__form"} method="get" action={this.props.inputField.href} target="_blank">
+							  <label className={this.props.tieserTyp + "__form__label-address"} htmlFor={this.props.inputField.inputId}>
+								  <input id={this.props.inputField.inputId} className={this.props.tieserTyp + "__form__input-address"} type="text" name="address" placeholder={this.props.inputField.placeholder}/>
+							  </label>
+							  <button className={this.props.tieserTyp +  "__form__button-submit"} type="submit" data-tealium-rel="content" style={{cursor: "pointer"}}></button>
+							</form>
+						}
+						{
 						this.props.contentImage !== null &&
 						<img className={this.props.tieserTyp + "__contentImage"} src={this.props.contentImage.file.url} />
 						}
@@ -64,7 +73,11 @@ class Teaser extends React.Component
 						  </span>
 						</aside>
 						}
-						<div className={this.props.tieserTyp + "__link"} onClick={this.props.handleClick}>{this.props.button}</div>
+						{this.props.inputField ? (
+							<a className={this.props.tieserTyp + "__link"} href={this.props.inputField.href} style={{textDecorationLine: "none"}}>{this.props.button}</a>
+						  ) : (
+							<div className={this.props.tieserTyp + "__link"} onClick={this.props.handleClick}>{this.props.button}</div>
+						  )}
 					</div>
 				}
 				{/* Default Teaser */}

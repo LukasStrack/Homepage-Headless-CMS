@@ -100,7 +100,7 @@
 	font-family: "TeleGroteskScreen-Regular";
 	height: 100px;
 	width: 100px;
-	margin-left: 50%;
+	margin-left: 55%;
 }
 
 .Teaser--isBig .MagentaSmarthome__badge__round{
@@ -108,8 +108,16 @@
 }
 
 .MagentaSmarthome__badge_css{
-	margin: auto;
-	padding: 30px;
+	-webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    height: 100%;
+    -webkit-box-pack: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+	position: absolute;
 }
 
 @media screen and (max-width: 641px){

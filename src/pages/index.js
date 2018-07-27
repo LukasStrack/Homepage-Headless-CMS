@@ -140,6 +140,11 @@ export const homepageQuery = graphql
 		teaser {
 		  title
 		  description
+		  inputField {
+			href
+			placeholder
+			inputId
+		  }
 		  button
 		  href
 		  isBig

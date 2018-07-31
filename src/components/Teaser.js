@@ -74,7 +74,7 @@ class Teaser extends React.Component
 						</aside>
 						}
 						{this.props.inputField ? (
-							<a className={this.props.tieserTyp + "__link"} href={this.props.inputField.href} style={{textDecorationLine: "none"}}>{this.props.button}</a>
+							<div className={this.props.tieserTyp + "__link"} href={this.props.inputField.href} style={{textDecorationLine: "none"}}>{this.props.button}</div>
 						  ) : (
 							<div className={this.props.tieserTyp + "__link"} onClick={this.props.handleClick}>{this.props.button}</div>
 						  )}
